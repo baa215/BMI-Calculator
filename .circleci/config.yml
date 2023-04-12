@@ -19,7 +19,7 @@ jobs:
 
       - run:
           name: Run tests
-          command: pytest --cov=BMIcalculator unittest.py
+          command: pytest --cov=BMIcalculator t_test.py
 
       - run:
           name: Upload coverage report to Coveralls
