@@ -1,7 +1,6 @@
 version: 2.1
-
 orbs:
-  coveralls: coveralls/coveralls@2.2.0
+  coveralls: coveralls/coveralls@2.1.0
 
 jobs:
   calculate-bmi:
@@ -26,12 +25,15 @@ jobs:
           name: Run tests
           command: pytest --cov=BMIcalculator t_test.py
 
-      - coveralls/coveralls-upload:
-          flags: --service=circle-ci
-          requires:
-            - run-tests
+      - run:
+          name: Upload coverage report to Coveralls
+          command: coveralls
+          environment:
+            COVERALLS_REPO_TOKEN: ITuBPDZoomNruUcBagS0b4W2SukckKVUL
+            COVERALLS_SERVICE_NAME: "circleci"
 
 workflows:
   run-bmi-calculator:
     jobs:
       - calculate-bmi
+
