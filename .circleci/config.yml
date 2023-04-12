@@ -7,9 +7,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Downgrade coverage package
-          command: pip install coverage==4.5.4
-      - run:
           name: Install dependencies
           command: |
             pip install -r requirements.txt
@@ -28,7 +25,9 @@ jobs:
 
       - run:
           name: Upload coverage report to Coveralls
-          command: coveralls
+          command: |
+            coverage report
+            coveralls
           environment:
             COVERALLS_REPO_TOKEN: c799e90bf8119fa18d388ffdb4405521f5ba17a7
 
@@ -36,3 +35,4 @@ workflows:
   run-bmi-calculator:
     jobs:
       - calculate-bmi
+
