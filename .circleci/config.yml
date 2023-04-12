@@ -4,8 +4,11 @@ jobs:
   calculate-bmi:
     docker:
       - image: python:3.8
-    steps:
+    ssteps:
       - checkout
+      - run:
+          name: Downgrade coverage package
+          command: pip install coverage==4.5.4
       - run:
           name: Install dependencies
           command: |
