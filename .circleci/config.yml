@@ -17,6 +17,7 @@ jobs:
             pip install coverage
             pip install pytest-cov
             pip install PyYAML
+            pip install python-coveralls
       - run:
           name: Run script
           command: python BMIcalculator.py 5 6 160
