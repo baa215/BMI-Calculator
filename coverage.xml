@@ -1,6 +1,6 @@
 <coverage>
   <source>
-    <directory>/path/to/project</directory>
+    <directory>/baa215/BMI-Calculator/circle.ci/config.yml
   </source>
   <packages>
     <package name="mypackage">
