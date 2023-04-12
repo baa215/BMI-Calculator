@@ -1,5 +1,6 @@
-import sys
 import math
+
+
 
 def heightcal(ft, inches): # calculates the height into inches 
     heighttotal = (ft * 12) + inches
@@ -10,14 +11,17 @@ def bmical(weight, height): # gets the bmi
     bmi = weight / (height)
     return bmi
 
-height_ft = float(sys.argv[1])
-height_in = float(sys.argv[2])
-weight = float(sys.argv[3])
 
-height = ((heightcal(height_ft, height_in) * 0.025)**2) # does the conversion to meters 
-weight = weight * 0.45 # does the coversion to metric system 
+
+heightinput = heightcal(float(input("Please enter your height in feet: ")), float(input("Please enter your height in inches: "))) # takes the input for height 
+
+weightinput = float(input("Please enter your weight in pounds: ")) # takes the input for weight 
+
+height = (heightinput * 0.025)**2 # does the conversion to meters 
+weight = weightinput * 0.45 # does the coversion to metric system 
 
 BMI = bmical(weight, height) # calls the bmi cal
+
 
 print("Your BMI is: ")
 print(round(BMI)) # makes bmi a whole number 
