@@ -4,7 +4,7 @@ jobs:
   calculate-bmi:
     docker:
       - image: python:3.8
-    ssteps:
+    steps:
       - checkout
       - run:
           name: Downgrade coverage package
