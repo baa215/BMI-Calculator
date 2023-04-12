@@ -5,6 +5,10 @@ jobs:
     docker:
       - image: python:3.8
     steps:
+      - checkout
+      - run:
+          name: Downgrade coverage package
+          command: pip install coverage==4.5.4
       - run:
           name: Install dependencies
           command: |
@@ -24,7 +28,6 @@ jobs:
 
   coveralls:
     runs-on: ubuntu-latest
-    needs: calculate-bmi
     steps:
       - uses: actions/checkout@v2
       - name: Coveralls GitHub Action
@@ -36,6 +39,8 @@ workflows:
   run-bmi-calculator:
     jobs:
       - calculate-bmi
-      - coveralls
+      - coveralls:
+          requires:
+            - calculate-bmi
 
 
