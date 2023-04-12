@@ -12,6 +12,9 @@ jobs:
       - run:
           name: Run script
           command: python BMIcalculator.py 5 6 160
+      - run:
+          name: Run tests
+          command: pytest
 
 workflows:
   run-bmi-calculator:
