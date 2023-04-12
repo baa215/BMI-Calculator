@@ -16,9 +16,16 @@ jobs:
             pip install PyYAML
             pip install python-coveralls
       - run:
-          name: Run tests and coverage
+          name: Run script
+          command: python BMIcalculator.py 5 6 160
+
+      - run:
+          name: Run tests
+          command: pytest --cov=BMIcalculator t_test.py
+
+      - run:
+          name: Upload coverage report to Coveralls
           command: |
-            coverage run -m pytest t_test.py
             coverage report
             coveralls
           environment:
@@ -28,5 +35,3 @@ workflows:
   run-bmi-calculator:
     jobs:
       - calculate-bmi
-
-
