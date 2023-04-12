@@ -11,6 +11,7 @@ jobs:
           command: |
             pip install -r requirements.txt
             pip install pytest
+            pip install coverage
             pip install pytest-cov
             pip install PyYAML
             pip install python-coveralls
