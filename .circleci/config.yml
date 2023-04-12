@@ -24,7 +24,7 @@ jobs:
           name: Upload coverage report to Coveralls
           command: coveralls
           environment:
-            COVERALLS_REPO_TOKEN: your_repo_token_here
+            COVERALLS_REPO_TOKEN: c799e90bf8119fa18d388ffdb4405521f5ba17a7
 
 workflows:
   run-bmi-calculator:
