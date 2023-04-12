@@ -28,6 +28,7 @@ jobs:
 
   coveralls:
     runs-on: ubuntu-latest
+    needs: calculate-bmi
     steps:
       - uses: actions/checkout@v2
       - name: Coveralls GitHub Action
@@ -39,7 +40,6 @@ workflows:
   run-bmi-calculator:
     jobs:
       - calculate-bmi
-      - coveralls:
-          requires:
-            - calculate-bmi
+      - coveralls
+
 
