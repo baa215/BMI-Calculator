@@ -25,6 +25,10 @@ jobs:
           name: Run tests
           command: pytest --cov=BMIcalculator t_test.py
 
+      - run:
+          name: Upload to Codecov
+          command: |
+            bash <(curl -s https://codecov.io/bash) -t fcb92d05-2aa4-4d47-91fc-0622d2d6fc16 -f coverage.xml
 
 workflows:
   run-bmi-calculator:
