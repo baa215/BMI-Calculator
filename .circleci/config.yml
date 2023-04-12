@@ -12,7 +12,6 @@ jobs:
             pip install -r requirements.txt
             pip install pytest
             pip install pytest-cov
-            pip install coveralls
             pip install PyYAML
       - run:
           name: Run script
@@ -23,14 +22,8 @@ jobs:
           command: pytest --cov=BMIcalculator t_test.py
 
       - run:
-          name: Generate coverage report
-          command: |
-            coverage report -m --fail-under=10
-            coverage lcov > coverage.lcov
-
-      - run:
           name: Upload coverage report to Coveralls
-          command: coveralls
+          command: coveralls --verbose
           environment:
             COVERALLS_REPO_TOKEN: c799e90bf8119fa18d388ffdb4405521f5ba17a7
 
@@ -38,4 +31,5 @@ workflows:
   run-bmi-calculator:
     jobs:
       - calculate-bmi
+
 
