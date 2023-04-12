@@ -1,0 +1,33 @@
+<coverage>
+  <source>
+    <directory>/path/to/project</directory>
+  </source>
+  <packages>
+    <package name="mypackage">
+      <classes>
+        <class name="mypackage.module1">
+          <methods>
+            <method name="my_method">
+              <lines>
+                <line number="1" hits="1"/>
+                <line number="2" hits="0"/>
+                <line number="3" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="1" hits="1"/>
+            <line number="2" hits="0"/>
+            <line number="3" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+      <lines>
+        <line number="1" hits="1"/>
+        <line number="2" hits="0"/>
+        <line number="3" hits="1"/>
+      </lines>
+    </package>
+  </packages>
+</coverage>
+
