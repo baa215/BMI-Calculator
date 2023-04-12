@@ -10,15 +10,18 @@ jobs:
           name: Install dependencies
           command: |
             pip install -r requirements.txt
-            pip install pytest
+            pip install pytest pytest-cov
+
       - run:
           name: Run script
           command: python BMIcalculator.py 5 6 160
+
       - run:
           name: Run tests
           command: pytest t_test.py --cov=BMIcalculator
+
       - run:
-          name: Send coverage report to Coveralls
+          name: Upload coverage report
           command: coveralls
 
 workflows:
