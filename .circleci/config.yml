@@ -26,16 +26,20 @@ jobs:
           name: Run tests
           command: pytest --cov=BMIcalculator t_test.py
 
-      - run:
-          name: Upload coverage report to Coveralls
-          command: |
-            coverage report
-            coveralls
-          environment:
-            COVERALLS_REPO_TOKEN: c799e90bf8119fa18d388ffdb4405521f5ba17a7
+  coveralls:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Coveralls GitHub Action
+        uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
 workflows:
   run-bmi-calculator:
     jobs:
       - calculate-bmi
+      - coveralls:
+          requires:
+            - calculate-bmi
 
