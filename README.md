@@ -12,4 +12,4 @@ The results should pop up after.
 
 
 
-https://coveralls.io/repos/github/baa215/BMI-Calculator/badge.svg?branch=main(Coverage Status)!:https://coveralls.io/github/baa215/BMI-Calculator?branch=main
+
