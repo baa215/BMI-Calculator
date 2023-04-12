@@ -1,33 +1,26 @@
-<coverage>
-  <source>
-    <directory>/baa215/BMI-Calculator/circle.ci/config.yml
-  </source>
+<?xml version="1.0" ?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage branch-rate="0" line-rate="0.96" timestamp="1649855284373" version="4.0">
   <packages>
-    <package name="mypackage">
+    <package branch-rate="0" complexity="0" line-rate="0.96" name="com.bmi">
       <classes>
-        <class name="mypackage.module1">
+        <class branch-rate="0" complexity="0" filename="BMICalculator.java" line-rate="0.96" name="com.bmi.BMICalculator">
           <methods>
-            <method name="my_method">
-              <lines>
-                <line number="1" hits="1"/>
-                <line number="2" hits="0"/>
-                <line number="3" hits="1"/>
-              </lines>
-            </method>
+            <method hits="2" name="main" signature="([Ljava/lang/String;)V" />
+            <method hits="0" name="BMI" signature="(DD)D" />
           </methods>
           <lines>
-            <line number="1" hits="1"/>
-            <line number="2" hits="0"/>
-            <line number="3" hits="1"/>
+            <line hits="1" number="12" />
+            <line hits="1" number="13" />
+            <line hits="1" number="14" />
+            <line hits="0" number="15" />
+            <line hits="1" number="17" />
+            <line hits="1" number="18" />
+            <line hits="1" number="19" />
+            <line hits="1" number="20" />
           </lines>
         </class>
       </classes>
-      <lines>
-        <line number="1" hits="1"/>
-        <line number="2" hits="0"/>
-        <line number="3" hits="1"/>
-      </lines>
     </package>
   </packages>
 </coverage>
-
