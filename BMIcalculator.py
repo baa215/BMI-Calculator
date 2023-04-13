@@ -28,12 +28,12 @@ if __name__ == "__main__":
     print(round(BMI))
 
     # compares bmi to all of these to find the correct one
-    if(BMI>0):
-        if(BMI<=18.5):
+    if BMI>0:
+        if BMI<=18.5:
             print("You are underweight.")
-        elif(BMI<=25):
+        elif BMI<=25:
             print("You are the normal weight.")
-        elif(BMI<=30):
+        elif BMI<=30:
             print("You are overweight.")
         else:
             print("You are obese.")
