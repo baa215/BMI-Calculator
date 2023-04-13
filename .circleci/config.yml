@@ -22,8 +22,10 @@ jobs:
           command: python BMIcalculator.py 5 6 160
 
       - run:
-          name: Run tests
-          command: pytest --cov=BMIcalculator t_test.py
+          name: Run tests and generate coverage report
+          command: |
+            coverage run --source=BMIcalculator -m pytest t_test.py
+            coverage xml
 
       - run:
           name: Upload to Codecov
