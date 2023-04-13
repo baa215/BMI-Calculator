@@ -2,12 +2,11 @@ import math
 import sys
 
 # calculates the height into inches
-def heightcal(ft, inches):
-    heighttotal = (ft * 12) + inches
+def heightcal(feet, inches):
+    heighttotal = (feet * 12) + inches
     return heighttotal
-
 # gets the bmi
-def bmical(weight, height):
+def bmi_cal(weight, height):
     bmi = weight / (height)
     return bmi
 
