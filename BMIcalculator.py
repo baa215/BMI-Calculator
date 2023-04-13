@@ -1,11 +1,13 @@
 import math
 import sys
 
-def heightcal(ft, inches): # calculates the height into inches 
+# calculates the height into inches
+def heightcal(ft, inches):
     heighttotal = (ft * 12) + inches
     return heighttotal
 
-def bmical(weight, height): # gets the bmi 
+# gets the bmi
+def bmical(weight, height):
     bmi = weight / (height)
     return bmi
 
@@ -14,19 +16,24 @@ if __name__ == "__main__":
     height_in = float(sys.argv[2])
     weight_pounds = float(sys.argv[3])
     
-    height = (heightcal(height_ft, height_in) * 0.025)**2 # does the conversion to meters 
-    weight = weight_pounds * 0.45 # does the coversion to metric system 
-    BMI = bmical(weight, height) # calls the bmi cal
+    # does the conversion to meters
+    height = (heightcal(height_ft, height_in) * 0.025)**2
+    # does the coversion to metric system
+    weight = weight_pounds * 0.45
+    # calls the bmi cal
+    BMI = bmical(weight, height)
 
     print("Your BMI is: ")
-    print(round(BMI)) # makes bmi a whole number 
+    # makes bmi a whole number
+    print(round(BMI))
 
-    if(BMI>0): # compares bmi to all of these to find the correct one
+    # compares bmi to all of these to find the correct one
+    if(BMI>0):
         if(BMI<=18.5):
             print("You are underweight.")
         elif(BMI<=25):
             print("You are the normal weight.")
         elif(BMI<=30):
             print("You are overweight.")
-        else: 
+        else:
             print("You are obese.")
