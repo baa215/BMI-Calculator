@@ -6,7 +6,7 @@ def heightcal(feet, inches):
     heighttotal = (feet * 12) + inches
     return heighttotal
 # gets the bmi
-def bmi_cal(weight, height):
+def bmical(weight, height):
     bmi = weight / (height)
     return bmi
 
