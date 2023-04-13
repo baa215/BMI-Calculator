@@ -4,7 +4,7 @@
   <packages>
     <package branch-rate="0" complexity="0" line-rate="0.96" name="com.bmi">
       <classes>
-        <class branch-rate="0" complexity="0" filename="BMICalculator.java" line-rate="0.96" name="com.bmi.BMICalculator">
+        <class branch-rate="0" complexity="0" filename="BMICalculator.py" line-rate="0.96" name="com.bmi.BMICalculator">
           <methods>
             <method hits="2" name="main" signature="([Ljava/lang/String;)V" />
             <method hits="0" name="BMI" signature="(DD)D" />
